@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+.main {
+    margin-top: 200px; 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #7469B6;
+
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+.header img {
+    width: 300px;
+    height: 100px;
+
+  }
+
+.p .card-text{
+  text-align: center;
+}
+.py-2{
+  background-color:#7469B6;
+  text-align: center;
+  color: white;
+}
+.bi-person-fill {
+   margin-left: 20px; 
+    margin-right: 5px; 
+    float: right; 
+    fill: #AD88C6;
+  }
+.bi-love-fill {
+    margin-top: 5px;
+    margin-left: 20px; 
+    margin-right: 20px;
+    float: right;
+    fill: #AD88C6;
+  }
+.bi-bag-dash-fill{
+  float: right;
+  fill: #AD88C6;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right:20px 
+
+  }
+.nav-link {
+    transition: color 0.2s ease;
+    text-decoration: nones;
+  }
+  
+  .nav-link:hover {
+    color: #AD88C6; 
+  }
+  .nav-link.active {
+    color: #000; 
+  }
+  .nav-link.active:hover {
+    color: #942a7d; 
+  }
+  
+  .dropdown-menu {
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .dropdown.show.dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li:hover a {
+    background:#942a7d;
+  }
+  
+ul {
+    background-color: white;
+    color: white;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 20px; 
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+    margin-top: 30px; 
+}
+
+td {
+    padding: 10px 0;
+    position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex-grow: 1;
+}
+
+.password-container .fa-eye,
+.password-container .fa-eye-slash {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #7469B6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input[type="reset"] {
+    background-color: #AD88C6;
+}
+
+input[type="reset"]:hover {
+    background-color: #218838;
+}
+
+input[type="reset"]:hover {
+    background-color: #AD88C6;
+}
+
+footer {
+    padding-top: 30px;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer {
+    background-color:white;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer .col-md-4 {
+    flex-basis: 33.33%;
+    margin-bottom: 20px;
+  }
+  
+  .footer h5 {
+    margin-top: 0;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+.footer p,
+.footer ul,
+.footer li {
+  text-align: left;
+  margin-left:20px;
+}
+
+  .footer li {
+    margin-bottom: 10px;
+  }
+  
+  .footer a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color:#942a7d;
+  }
+  
+  .footer-copyright {
+    background-color:#7469B6;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    clear: both;
+  }
+  
+  @media (max-width: 768px) {
+    .footer .col-md-4 {
+      flex-basis: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer .col-md-4 {
+      flex-basis: 100%;
+    }
+  }
+  

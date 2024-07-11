@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="py.css">
+    <title>Checkout Form</title>
+</head>
+
+<header>
+    <div class="header">
+        <div class="py-2">
+            Discount 50% Discount 50%
+        </div>
+        <div class="topnav">
+            <a href="Login.html" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" style="float:right" width="30" height="30" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                </svg>
+            </a>
+            <a href="https://youtu.be/-UZ0n2Tqiyw?si=d2JstsCpTZru49_Z" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" style="float:right" width="20" height="20" class="bi bi-love-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                </svg>
+            </a>
+            <a href="Index.html" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" style="float:right" width="20" height="20" class="bi bi-bag-dash-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M6 9.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1z"/>
+                </svg>
+            </a>
+            <a href="Index.html">
+                <img src="head.jpg" alt="logo" class="float-left mr-2">
+            </a>
+        </div>
+</header>
+<body>
+
+<div class="container">
+
+    <form id="checkoutForm" action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">Billing Address</h3>
+
+                <div class="inputBox">
+                    <span>Full Name :</span>
+                    <input type="text" id="fullName" placeholder="Veritas ratio" required>
+                    <div class="invalid-feedback">Full name is required.</div>
+                </div>
+                <div class="inputBox">
+                    <span>Email :</span>
+                    <input type="email" id="email" placeholder="example@example.com" required>
+                    <div class="invalid-feedback">Email is required.</div>
+                </div>
+                <div class="inputBox">
+                    <span>Address :</span>
+                    <input type="text" id="address" placeholder="Room - Street - Locality" required>
+                    <div class="invalid-feedback">Address is required.</div>
+                </div>
+                <div class="inputBox">
+                    <span>City :</span>
+                    <input type="text" id="city" placeholder="Your city" required>
+                    <div class="invalid-feedback">City is required.</div>
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>State :</span>
+                        <input type="text" id="state" placeholder="....." required>
+                        <div class="invalid-feedback">State is required.</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">Payment</h3>
+
+                
+                <div class="inputBox">
+                    <span>Name on Card :</span>
+                    <input type="text" id="cardName" placeholder="Mr. Veritas ratio" required>
+                    <div class="invalid-feedback">Name on card is required.</div>
+                </div>
+                <div class="inputBox">
+                    <span>Credit Card Number :</span>
+                    <input type="number" id="cardNumber" placeholder="xxx-xxx-xxxx" required>
+                    <div class="invalid-feedback">Credit card number is required.</div>
+                </div>
+                <div class="inputBox">
+                    <span>Total :</span>
+                    <input type="text" id="cardName" placeholder="100$" required>
+                </div>
+                <div class="inputBox">
+                    <span>Cards Accepted :</span>
+                    <img src="card_img.png" alt="Cards Accepted">
+                </div>
+
+            </div>
+    
+        </div>
+        <button
+        id="mybtn"
+        class="btn btn-primary btn-lg btn-block"
+        type="button"
+        onclick="location.href='acc.html'"
+      >
+        Proses pembayaran
+      </button>
+      
+    </form>
+
+</div>
+<script>
+    document.getElementById('checkoutForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent traditional form submission
+
+        var isValid = true;
+        var fields = ['fullName', 'email', 'address', 'city', 'state', 'cardName', 'cardNumber'];
+
+        fields.forEach(function(fieldId) {
+            var field = document.getElementById(fieldId);
+            if (!field.value) {
+                isValid = false;
+                field.nextElementSibling.style.display = 'block';
+            } else {
+                field.nextElementSibling.style.display = 'none';
+            }
+        });
+
+        if (isValid) {
+            window.location.href = 'index.html'; // Redirect to the index page
+        } else {
+            alert('Please fill out all required fields.');
+        }
+    });
+</script>
+</body>
+<footer class="footer">
+    <div class="footer-copyright">
+        <p>&copy; 2023 Lavelora Company. All rights reserved.</p>
+    </div>
+    </footer>
+</html>
